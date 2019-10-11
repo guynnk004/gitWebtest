@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+
+    <script>
+        $(document).ready(function () {
+            $("#txtUser").focus();
+            $("#btnLogin").click(function () {
+                let username = $("#txtUser").val();
+                let password = $("#txtPassword").val();
+                if (username == "user" && password == "1234") {
+                    alert("OK")
+                } else {
+                    alert("Fail")
+                }
+            });
+
+            $("#btnReset").click(function () {
+                $("#txtUser").val("");
+                $("#txtPassword").val("");
+                $("#txtUser").focus();
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="nav navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="#">Login</a>
+            <a class="nav-item nav-link" href="about.html">About</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <input type="text" id="txtUser" placeholder="Username" class="form-control my-2">
+        <input type="password" id="txtPassword" placeholder="Password" class="form-control mb-2">
+        <button id="btnLogin" class="btn btn-primary">Login</button>
+        <button id="btnReset" class="btn btn-secondary">Reset</button>
+    </div>
+</body>
+
+</html>
